@@ -15,9 +15,8 @@ class App
             unset($URL[0]);
         }
 
-        require $filename;
+        require "../private/controllers/".$this->controller.".php";
         $this->controller=new $this->controller();
-        // require "../private/controllers/".$this->controller.".php";
 
         if(isset($URL[1])){
             if(method_exists($this->controller,$URL[1])){

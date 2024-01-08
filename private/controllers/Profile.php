@@ -1,12 +1,12 @@
 <?php 
 
-class Home extends Controller
+class Profile extends Controller
 {
 
     public function index()
     {
         
-        $this->view('home');
+        $this->view('profile');
        
     }
 }
