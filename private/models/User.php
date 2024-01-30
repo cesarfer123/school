@@ -43,6 +43,11 @@
             $this->errors['password']="The password do not match";
         }
 
+        // check if email exists
+         if($this->where('email',$data['email'])){
+            $this->errors['password']="That email is already in use";
+        }
+
         // check for password length
         if(strlen($data['password'])< 8){
             $this->errors['password']="Password must be at least 8 characters long";
@@ -70,7 +75,7 @@
 
    public function make_user_id($data){
 
-        $data['user_id']=$this->random_string(60);
+        $data['user_id']=random_string(60);
         return $data;
    }
 
@@ -86,27 +91,5 @@
         return $data;
     }
 
-    public function random_string($length){
-
-        // Números del 0 al 9
-        $numeros = range(0, 9);
-
-        // Letras minúsculas del alfabeto
-        $letras_minusculas = range('a', 'z');
-
-        // Letras mayúsculas del alfabeto
-        $letras_mayusculas = range('A', 'Z');
-
-        // Combina los tres arrays en uno solo
-        $array = array_merge($numeros, $letras_minusculas, $letras_mayusculas);
-
-        $text="";
-
-        for ($x=0; $x < $length; $x++) { 
-            $random=rand(0,61);
-            $text.=$array[$random];
-        }
-    
-        return $text;
-   }
+  
  }

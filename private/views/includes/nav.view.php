@@ -25,8 +25,17 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?=ROOT?>">DASHBOARD</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="<?=ROOT?>/users">USERS</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="<?=ROOT?>/schools">SCHOOLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=ROOT?>/staff">STAFF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=ROOT?>/students">STUDENTS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=ROOT?>classes">CLASSES</a>
